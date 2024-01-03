@@ -1,0 +1,27 @@
+pipeline{
+    agent any
+
+    tools{
+        maven "Maven"
+    }
+    parameters{
+        text(name:'NAME',defaultValue:'Santiago', description:'no description')
+    }
+
+    stages{
+        stage('Downloading and comiling project'){
+            steps{
+                echo "compiling"
+                git branch: 'main', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
+                sh 'javac src/main/java/org/example/Main.java'
+
+            }
+        }
+        stage('Executing application'){
+            steps{
+                echo "executing"
+                sh "java -cp src/main/java org.example.Main -NAME=${params.NAME}"
+            }
+        }
+    }
+}
