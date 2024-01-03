@@ -13,14 +13,14 @@ pipeline{
             steps{
                 echo "compiling"
                 git branch: 'main', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
-                sh 'javac src/test/java/tests/MainTest.java'
+                sh 'javac src/test/java/tests.MainTest.java'
 
             }
         }
         stage('Executing application'){
             steps{
                 echo "executing"
-                sh "java -cp src/test/java test.MainTest -variable=${params.myVariable}"
+                sh "java -cp src/test/java tests.MainTest -variable=${params.myVariable}"
             }
         }
     }
