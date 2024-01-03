@@ -5,12 +5,12 @@ import org.testng.annotations.Test;
 public class MainTest extends BaseTest{
 
     String text = "Globant";
-    String envVariable = System.getenv("variable");
+    String variable = System.getenv("variable");
 
     @Test
     public void testApplications() throws InterruptedException {
 
-        switch (envVariable){
+        switch (variable){
             case "1" -> {
                 getGlobantPage();
                 System.out.println(globantPage.getTextGlobantWebSite());
