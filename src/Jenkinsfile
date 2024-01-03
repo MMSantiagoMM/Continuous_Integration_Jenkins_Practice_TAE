@@ -13,7 +13,7 @@ pipeline{
             steps{
                 echo "compiling"
                 git branch: 'main', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
-                sh 'javac src/test/java/tests.MainTest.java'
+                sh 'javac src/test/java/tests/MainTest.java'
 
             }
         }
