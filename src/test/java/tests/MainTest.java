@@ -4,11 +4,12 @@ import org.testng.annotations.Test;
 
 public class MainTest extends BaseTest{
 
-    String text = "Globant";
-    String variable = System.getenv("variable");
+
 
     @Test
     public void testApplications() throws InterruptedException {
+        String text = "Globant";
+        String variable = System.getenv("variable");
 
         switch (variable){
             case "1" -> {
