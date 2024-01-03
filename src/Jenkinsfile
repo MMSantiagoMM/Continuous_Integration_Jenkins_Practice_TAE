@@ -21,7 +21,7 @@ pipeline{
             steps{
                 echo "executing"
                 //sh "java -cp src/test/java tests.MainTest -variable=${params.myVariable}"
-                sh 'mvn test -variable=${params.variable}'
+                sh "mvn test -variable=${params.variable}"
             }
         }
     }
