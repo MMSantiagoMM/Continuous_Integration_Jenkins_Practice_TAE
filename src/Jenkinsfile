@@ -5,7 +5,10 @@ pipeline{
         maven "Maven"
     }
     parameters{
-        text(name:'NAME',defaultValue:'Santiago', description:'no description')
+        text(name:'myVariable',defaultValue:'1', description:
+        'Enter option 1 to test website Globant,
+        option 2 to test Globant YouTube channel,
+        option 3 to test Globant wikipedia website')
     }
 
     stages{
@@ -13,14 +16,14 @@ pipeline{
             steps{
                 echo "compiling"
                 git branch: 'main', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
-                sh 'javac src/main/java/org/example/Main.java'
+                sh 'javac src/test/java/tests/MainTest.java'
 
             }
         }
         stage('Executing application'){
             steps{
                 echo "executing"
-                sh "java -cp src/main/java org.example.Main -NAME=${params.NAME}"
+                sh "java -cp src/test/java test.MainTest -variable=${params.myVariable}"
             }
         }
     }
