@@ -27,6 +27,7 @@ pipeline{
                 echo "executing"
                 //sh "java -cp src/test/java tests.MainTest -variable=${params.myVariable}"
                 sh "mvn clean test -variable=${params.variable}"
+                sh script: 'mvn test -Dbrowser=localchrome'
             }
         }
     }
