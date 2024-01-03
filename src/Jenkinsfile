@@ -17,6 +17,11 @@ pipeline{
 
             }
         }
+        stage('Verify browsers'){
+                    steps{
+                        sh 'google-chrome --version'
+                    }
+                }
         stage('Executing application'){
             steps{
                 echo "executing"
