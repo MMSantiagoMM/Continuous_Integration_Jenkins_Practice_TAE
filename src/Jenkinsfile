@@ -5,10 +5,7 @@ pipeline{
         maven "Maven"
     }
     parameters{
-        text(name:'myVariable',defaultValue:'1', description:
-        'Enter option 1 to test website Globant,
-        option 2 to test Globant YouTube channel,
-        option 3 to test Globant wikipedia website')
+        text(name:'myVariable',defaultValue:'1', description:'Enter option 1 to test website Globant, option 2 to test Globant YouTube channel, option 3 to test Globant wikipedia website')
     }
 
     stages{
