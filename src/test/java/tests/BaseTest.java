@@ -19,10 +19,12 @@ public class BaseTest {
     String youTubeUrl= "https://www.youtube.com/";
     String wikipediaUrl = "https://es.wikipedia.org/wiki/Wikipedia:Portada";
 
+    ChromeOptions options2 = new ChromeOptions();
+
     @BeforeTest
     public void setBeforeTest(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
+        options.addArguments("--headless=new");
 
 
 
