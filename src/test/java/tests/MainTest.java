@@ -9,8 +9,7 @@ public class MainTest extends BaseTest{
     @Test
     public void testApplications() throws InterruptedException {
         String text = "Globant";
-        //String variable = System.getenv("variable");
-        String variable = "2";
+        String variable = System.getenv("variable");
         //getGlobantPage();
         //System.out.println(globantPage.getTextGlobantWebSite());
 
