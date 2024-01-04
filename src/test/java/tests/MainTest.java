@@ -11,7 +11,10 @@ public class MainTest extends BaseTest{
         String text = "Globant";
         String variable = System.getenv("variable");
 
-        switch (variable){
+        getGlobantPage();
+        System.out.println(globantPage.getTextGlobantWebSite());
+
+        /*switch (variable){
             case "1" -> {
                 getGlobantPage();
                 System.out.println(globantPage.getTextGlobantWebSite());
@@ -29,7 +32,7 @@ public class MainTest extends BaseTest{
                 System.out.println(wikiPediaPage.getText());
             }
             default -> System.out.println("Enter a valid option");
-        }
+        }*/
 
     }
 
