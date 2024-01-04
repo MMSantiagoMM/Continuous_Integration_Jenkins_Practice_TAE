@@ -29,8 +29,8 @@ public class BaseTest {
         //options.addArguments("--headless");
         //WebDriverManager.chromedriver().setup();
         //driver = new ChromeDriver(options);
-        String driverPath="C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver",driverPath);
+        //String driverPath="C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe";
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
