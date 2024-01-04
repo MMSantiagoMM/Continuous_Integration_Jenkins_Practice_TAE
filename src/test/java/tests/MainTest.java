@@ -13,6 +13,7 @@ public class MainTest extends BaseTest{
         //getGlobantPage();
         String variable = "3";
         //System.out.println(globantPage.getTextGlobantWebSite());
+        System.out.println("Helloooooooo");
 
         switch (variable){
             case "1" -> {
