@@ -25,7 +25,7 @@ pipeline{
                 //sh "java -cp src/test/java tests.MainTest -variable=${params.myVariable}"
                 //bat "mvn clean test -variable=${params.variable}"
                 //bat 'mvn -Dmaven.test.failure.ignore=true clean package'
-               bat "mvn clean test -variable=${params.variable}"
+               bat "mvn clean verify -variable=${params.variable}"
             }
         }
     }
