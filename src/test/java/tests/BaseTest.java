@@ -22,7 +22,8 @@ public class BaseTest {
     @BeforeTest
     public void setBeforeTest(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("headless");
+
 
 
         driver = new ChromeDriver(options);
