@@ -11,6 +11,7 @@ public class MainTest extends BaseTest{
         String text = "Globant";
         String variable = System.getenv("variable");
         //getGlobantPage();
+        //String variable = "2";
         //System.out.println(globantPage.getTextGlobantWebSite());
 
         switch (variable){
