@@ -11,9 +11,9 @@ public class MainTest extends BaseTest{
         String text = "Globant";
         String variable = System.getenv("variable");
 
-        getGlobantPage();
-        System.out.println(globantPage.getTextGlobantWebSite());
-        /*
+        //getGlobantPage();
+        //System.out.println(globantPage.getTextGlobantWebSite());
+
         switch (variable){
             case "1" -> {
                 getGlobantPage();
@@ -33,7 +33,7 @@ public class MainTest extends BaseTest{
             }
             default -> System.out.println("Enter a valid option");
         }
-*/
+
     }
 
 }
