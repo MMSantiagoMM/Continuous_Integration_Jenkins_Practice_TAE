@@ -14,19 +14,19 @@ pipeline{
                 echo "compiling"
                 git branch: 'test', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
                 //sh 'javac src/test/java/tests/MainTest.java'
-                //bat(script:'javac src/test/java/tests/MainTest.java',returnStatus: true)
-                bat "mvn test -Dvariable=${params.variable}"
+                bat(script:'javac src/test/java/tests/MainTest.java',returnStatus: true)
+
 
             }
         }
-        //stage('Executing application'){
-          //  steps{
-            //    echo "executing"
+        stage('Executing application'){
+           steps{
+               echo "executing"
                 //sh "java -cp src/test/java tests.MainTest -variable=${params.myVariable}"
                 //bat "mvn clean test -variable=${params.variable}"
                 //bat 'mvn -Dmaven.test.failure.ignore=true clean package'
-              //  bat "java MainTest -variable=${params.variable}"
-            //}
-        //}
+               bat "mvn clean verify MainTest -variable=${params.variable}"
+            }
+        }
     }
 }
