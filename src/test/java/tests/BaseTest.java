@@ -1,8 +1,10 @@
 package tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeTest;
 import pages.GlobantPage;
 import pages.WikiPediaPage;
@@ -24,8 +26,8 @@ public class BaseTest {
     @BeforeTest
     public void setBeforeTest(){
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
-
+        options.addArguments("--headless");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
     }
 
