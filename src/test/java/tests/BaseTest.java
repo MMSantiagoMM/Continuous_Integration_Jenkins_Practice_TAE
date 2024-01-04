@@ -28,9 +28,6 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         //WebDriverManager.chromedriver().setup();
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("disable-infobars");
         driver = new ChromeDriver(options);
     }
 
