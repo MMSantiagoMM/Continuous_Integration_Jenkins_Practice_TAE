@@ -29,7 +29,7 @@ public class BaseTest {
         //driver = new ChromeDriver(options);
         String driverPath="C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver",driverPath);
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
 
         //ChromeOptions options = new ChromeOptions();
         //options.addArguments("--remote-allow-origins=*");

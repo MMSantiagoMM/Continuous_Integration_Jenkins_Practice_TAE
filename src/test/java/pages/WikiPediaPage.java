@@ -10,7 +10,7 @@ public class WikiPediaPage extends BasePage{
         driver.get(url);
     }
 
-    @FindBy(className = "cdx-text-input__input")
+    @FindBy(css = "#searchInput")
     WebElement inputSearch;
 
     @FindBy(css = ".cdx-button.cdx-search-input__end-button")
@@ -20,7 +20,8 @@ public class WikiPediaPage extends BasePage{
     WebElement textFound;
 
 
-    public void sendText(String url){
+    public void sendText(String url) throws InterruptedException {
+        this.isElementPresent(inputSearch);
         inputSearch.sendKeys(url);
     }
 
