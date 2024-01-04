@@ -12,7 +12,7 @@ import pages.YouTubePage;
 
 public class BaseTest {
 
-    WebDriver driver = null;
+    WebDriver driver;
     GlobantPage globantPage;
     YouTubePage youTubePage;
     WikiPediaPage wikiPediaPage;
@@ -25,15 +25,15 @@ public class BaseTest {
 
     @BeforeTest
     public void setBeforeTest(){
-        //ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless");
-        //WebDriverManager.chromedriver().setup();
-        //driver = new ChromeDriver(options);
-        //String driverPath="C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe";
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--headless");
+        //WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
+        //String driverPath="C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe";
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe");
+        //ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--remote-allow-origins=*");
+        //driver = new ChromeDriver(options);
     }
 
 
