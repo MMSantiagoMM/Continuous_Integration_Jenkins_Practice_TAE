@@ -14,7 +14,7 @@ pipeline{
                 echo "compiling"
                 git branch: 'test', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
                 //sh 'javac src/test/java/tests/MainTest.java'
-                bat(script:'javac src/test/java/tests/MainTest.java',returnStatus: true)
+                //bat(script:'javac src/test/java/tests/MainTest.java',returnStatus: true)
                 bat "mvn test -Dvariable=${params.variable}"
 
             }
