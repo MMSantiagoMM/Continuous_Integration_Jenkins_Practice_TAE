@@ -11,8 +11,7 @@ public class MainTest extends BaseTest{
     public void testApplications() throws InterruptedException {
         String globant = "Globant";
         String beKind = "Be kind";
-        //String variable = System.getenv("variable");
-        String variable = "1";
+        String variable = System.getenv("variable");
 
         switch (variable){
             case "1" -> {

@@ -30,9 +30,9 @@ public class BaseTest {
         //driver = new ChromeDriver(options);
         String driverPath="C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver",driverPath);
-        options.setEnableDownloads(true);
-        driver = new RemoteWebDriver(options);
-
+        //options.setEnableDownloads(true);
+        //driver = new RemoteWebDriver(options);
+        driver = new ChromeDriver();
         //ChromeOptions options = new ChromeOptions();
         //options.addArguments("--remote-allow-origins=*");
         //driver = new ChromeDriver(options);
