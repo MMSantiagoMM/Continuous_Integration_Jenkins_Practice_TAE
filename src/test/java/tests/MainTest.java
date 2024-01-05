@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MainTest extends BaseTest{
@@ -8,26 +9,27 @@ public class MainTest extends BaseTest{
 
     @Test
     public void testApplications() throws InterruptedException {
-        String text = "Globant";
-        String variable = System.getenv("variable");
-
+        String globant = "Globant";
+        String beKind = "Be kind";
+        //String variable = System.getenv("variable");
+        String variable = "1";
 
         switch (variable){
             case "1" -> {
                 getGlobantPage();
-                System.out.println(globantPage.getTextGlobantWebSite());
+                Assert.assertEquals(globantPage.getTextGlobantWebSite(),beKind);
             }
             case "2" -> {
                 getYouTubePage();
-                youTubePage.sendText(text);
+                youTubePage.sendText(globant);
                 youTubePage.clickSearchButton();
-                System.out.println(youTubePage.getTextChannel());
+                Assert.assertEquals(youTubePage.getTextChannel(),globant);
             }
             case "3" -> {
                 getWikiPediaPage();
-                wikiPediaPage.sendText(text);
+                wikiPediaPage.sendText(globant);
                 wikiPediaPage.clickButton();
-                System.out.println(wikiPediaPage.getText());
+                Assert.assertEquals(wikiPediaPage.getText(),globant);
             }
             default -> System.out.println("Enter a valid option");
         }

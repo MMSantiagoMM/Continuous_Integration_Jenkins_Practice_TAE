@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeTest;
 import pages.GlobantPage;
 import pages.WikiPediaPage;
@@ -27,9 +28,10 @@ public class BaseTest {
         options.addArguments("--headless");
         WebDriverManager.chromedriver().setup();
         //driver = new ChromeDriver(options);
-        String driverPath="C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver";
+        String driverPath="C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe";
         System.setProperty("webdriver.chrome.driver",driverPath);
-        driver = new ChromeDriver();
+        options.setEnableDownloads(true);
+        driver = new RemoteWebDriver(options);
 
         //ChromeOptions options = new ChromeOptions();
         //options.addArguments("--remote-allow-origins=*");
