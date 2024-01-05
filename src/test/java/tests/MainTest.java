@@ -10,10 +10,7 @@ public class MainTest extends BaseTest{
     public void testApplications() throws InterruptedException {
         String text = "Globant";
         String variable = System.getenv("variable");
-        //getGlobantPage();
-        //String variable = "3";
-        //System.out.println(globantPage.getTextGlobantWebSite());
-        System.out.println("Helloooooooo");
+
 
         switch (variable){
             case "1" -> {
