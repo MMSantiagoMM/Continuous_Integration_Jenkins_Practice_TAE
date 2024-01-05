@@ -12,7 +12,7 @@ pipeline{
         stage('Downloading and compiling project'){
             steps{
                 echo "compiling"
-                git branch: 'test', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
+                git branch: 'main', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
                 //sh 'javac src/test/java/tests/MainTest.java'
                 //bat(script:'javac src/test/java/tests/MainTest.java',returnStatus: true)
 
