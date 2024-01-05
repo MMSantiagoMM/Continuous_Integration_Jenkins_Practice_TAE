@@ -5,22 +5,30 @@ pipeline{
         maven "Maven"
     }
     parameters{
-        text(name:'NAME',defaultValue:'Santiago', description:'no description')
+        text(name:'variable',defaultValue:'1', description:'Enter option 1 to test website Globant, option 2 to test Globant YouTube channel, option 3 to test Globant wikipedia website')
     }
 
     stages{
-        stage('Downloading and comiling project'){
+        stage('Downloading and compiling project'){
             steps{
                 echo "compiling"
-                git branch: 'main', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
-                sh 'javac src/main/java/org/example/Main.java'
+                git branch: 'test', url: 'https://github.com/MMSantiagoMM/Continuous_Integration_Jenkins_Practice_TAE.git'
+                //sh 'javac src/test/java/tests/MainTest.java'
+                //bat(script:'javac src/test/java/tests/MainTest.java',returnStatus: true)
+
 
             }
         }
         stage('Executing application'){
-            steps{
-                echo "executing"
-                sh "java -cp src/main/java org.example.Main -NAME=${params.NAME}"
+           steps{
+               echo "executing"
+                //sh "java -cp src/test/java tests.MainTest -variable=${params.myVariable}"
+                //bat "mvn clean test -variable=${params.variable}"
+                //bat 'mvn -Dmaven.test.failure.ignore=true clean package'
+               //bat "mvn clean verify -variable=${params.variable}"
+               //bat "mvn clean verify -Dvariable=${params.variable}"
+               sh "mvn clean verify -Dvariable=${params.variable}"
+
             }
         }
     }

@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" >
+    <test name="test-globant">
+        <parameter name="param" value="Globant"/>
+        <classes>
+            <class name="tests.MainTest"/>
+        </classes>
+    </test>
+</suite>
