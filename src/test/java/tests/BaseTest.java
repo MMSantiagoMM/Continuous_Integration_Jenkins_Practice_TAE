@@ -27,7 +27,7 @@ public class BaseTest {
         options.addArguments("--headless");
         WebDriverManager.chromedriver().setup();
         //driver = new ChromeDriver(options);
-        String driverPath="C:\\Users\\s.mosquera\\IdeaProjects\\TAE\\CI-practice\\src\\chromedriver.exe";
+        String driverPath="C:/Users/s.mosquera/IdeaProjects/TAE/CI-practice/src/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver",driverPath);
         driver = new ChromeDriver();
 
