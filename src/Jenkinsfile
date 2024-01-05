@@ -27,7 +27,7 @@ pipeline{
                 //bat 'mvn -Dmaven.test.failure.ignore=true clean package'
                //bat "mvn clean verify -variable=${params.variable}"
                //bat "mvn clean verify -Dvariable=${params.variable}"
-               sh "mvn clean test -Dvariable=${params.variable}"
+               sh "mvn clean verify -Dvariable=${params.variable}"
 
             }
         }
